@@ -8,38 +8,146 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Buzzquizz</title>
 </head>
 <body>
     
     <!-- tela 2: aqui vai ser o código a exibição de um quizz. -->
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+
 
     <div class="header">BuzzQuizz</div>   
     <!-- esse é o header no topo do site, pode ser usado em todas as telas  -->
 
-   <div class="listaQuizzes">
+   <div class="tela2 listaQuizzes">
+
+        <!-- essa é a div que aparece quando o usuário ainda não criou nenhum quizz  -->
        <div class="criarQuizzContainer">
-            <div class="criarQuizzContainer2">
-                <p class="semQuizz">Você não criou nenhum quizz ainda :(</p>
-                <button class="criarQuizz"></button>
-            </div>
+            <p class="semQuizz">Você não criou nenhum<br>quizz ainda :(</p>
+            <button class="criarQuizz">Criar Quizz</button>
        </div>
+        <!-- --------------------------------------------------------------------------->
+
+
+        <!-- essa é a div que aparece quando o usuário já criou algum quizz -->
+        <div class="todosQuizzesContainer heightAjust hide">
+           <div class="seusQuizzesContainer">
+               <h2>Seus Quizzes</h2>
+               <ion-icon name="add-circle-sharp" class="iconeAdicionar"></ion-icon>
+           </div>
+           <ul class="todosQuizzes">
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+           </ul>
+       </div>
+        <!-- --------------------------------------------------------------------------->
+
+
 
        <div class="todosQuizzesContainer">
-           <h2 class="tituloTodosQuizzes">Todos os Quizzes</h2>
-           <div class="todosQuizzes">
-                <div class="quizz">
-                    <img src="" alt="">
-                    <p class="tituloQuizz"></p>
-                </div>
-           </div>
+           <h2>Todos os Quizzes</h2>
+           <ul class="todosQuizzes">
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+           </ul>
        </div>
    </div>
     
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+
+
+    <div class="tituloImagem">O quão Potterhead é você?</div>
+    <!-- Aqui tem o título do figma, mas depois esse título vai vir no innerHTML do js  -->
+
+
+    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+
+
+   <ul class="perguntas">
+
+    <!-- cada pergunta é um item il  -->
+
+    <li class="pergunta">
+
+        <div class="caixaPergunta"> Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
+
+            <!-- cada opção de resposta é um item li dentro da il pergunta no html  -->
+            <ul class="opcoes">
+                
+                <li class="opcao"> <img src="imagens/gato.png" alt="imagem a">
+                    <p>Gatíneo</p>
+                </li>
+
+                <li class="opcao"> <img src="imagens/gato.png" alt="imagem a">
+                    <p>Gatíneo</p>
+                </li>
+
+                <li class="opcao"> <img src="imagens/gato.png" alt="imagem a">
+                    <p>Gatíneo</p>
+                </li>
+
+                <li class="opcao"> <img src="imagens/gato.png" alt="imagem a">
+                    <p>Gatíneo</p>
+                </li>
+
+                
+
+            </ul>
+
+
+    </li>
 
 
 
 
+   </ul>
+
+
+
+
+
+
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
