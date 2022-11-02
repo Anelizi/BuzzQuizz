@@ -147,7 +147,7 @@ body{
 
 /* PÁGINA DE UM QUIZZ */
 .tituloImagem{
-    /* color: white; */
+    color: white;
     font-size: 19px;
     font-weight: 400;
     width: 100%;
@@ -155,10 +155,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: absolute;
-    top: 69px;
-    left: 0px; */
-    background-image: url();
+    background-image: url(imagens/capadoquizz.png);
 
 
 }
@@ -180,6 +177,11 @@ body{
     background-color: white;
     transition: all .4s linear;
     box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.05);
+}
+
+.dois .caixaPergunta{
+    background-color: 
+    #A0438D;
 }
 
 .fim{
@@ -230,8 +232,6 @@ body{
 
 .opcoes{
     display: flex;
-    margin: bottom 0px;;
-   
 }
 
 
@@ -279,7 +279,14 @@ body{
 }
 
 
+/* mobole da tela 2 */
+
 @media(max-width:760px){
+
+    .tituloImagem{
+        height: 142px;
+    }
+
     .pergunta, .fim{
         width: 375px;
         height: 436px;
@@ -294,8 +301,8 @@ body{
 
     
     .opcoes{
-        margin-top: 12px;
-        margin-bottom: 0px;
+       margin-top: -5px;
+       margin-bottom: -7px;
     }
 
     .opcao{
@@ -323,7 +330,7 @@ body{
 
     .caixaResultado{
         width: 340px;
-        padding: 23px 0px 22px 0px ;
+        padding: 23px 0px 0px 0px ;
         font-size: 19px;
 
     }
@@ -334,14 +341,15 @@ body{
     .imagemETexto p{
         width: 340px;
         height: 96px;
-        margin-top: 0px;
+        margin-top: -16px;
         margin-left: 19px;
+        font-size: 17px;
     }
     .imagemETexto img{
         width: 340px;
         height: 255px;
-        margin-bottom: 9px;
         margin-left: 19px;
+        margin-top: 9px;
     }
 
 }
