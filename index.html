@@ -18,13 +18,84 @@
      <div class="header">BuzzQuizz</div>   
     <!-- esse é o header no topo do site, pode ser usado em todas as telas  -->
 
+    <!-- INICIO TELA 1 - LISTA DE QUIZZES -->
+   <div class="tela1 listaQuizzes">
 
-    <div class="tela2 desaparece">
+        <!-- essa é a div que aparece quando o usuário ainda não criou nenhum quizz  -->
+       <div class="criarQuizzContainer">
+            <p class="semQuizz">Você não criou nenhum<br>quizz ainda :(</p>
+            <button class="criarQuizz">Criar Quizz</button>
+       </div>
+        <!-- --------------------------------------------------------------------------->
+
+
+        <!-- essa é a div que aparece quando o usuário já criou algum quizz -->
+        <div class="todosQuizzesContainer heightAjust hide">
+           <div class="seusQuizzesContainer">
+               <h2>Seus Quizzes</h2>
+               <ion-icon name="add-circle-sharp" class="iconeAdicionar"></ion-icon>
+           </div>
+           <ul class="todosQuizzes">
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+           </ul>
+       </div>
+        <!-- --------------------------------------------------------------------------->
+
+
+
+       <div class="todosQuizzesContainer">
+           <h2>Todos os Quizzes</h2>
+           <ul class="todosQuizzes">
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+
+                <li class="quizz">
+                    <div class="imagemCapaQuizz"></div>
+                    <p class="tituloQuizz">Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
+                </li>
+           </ul>
+       </div>
+   </div>
+    
+
+   <div class="tela2 desaparece">
     <!-- tela 2: aqui vai ser o código a exibição de um quizz. -->
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
-
-
-   
 
     <!-- --------------------------------------------------------------------------------------------------------------------- -->
 
@@ -40,7 +111,7 @@
 
     <!-- cada pergunta é um item il  -->
 
-    <li class="pergunta">
+    <li class="pergunta um">
 
         <div class="caixaPergunta"> Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
 
@@ -71,7 +142,7 @@
     </li>
 
 
-    <li class="pergunta">
+    <li class="pergunta dois">
 
         <div class="caixaPergunta"> Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
 
@@ -106,7 +177,7 @@
 
         <div class="caixaResultado">88% de acerto: Você é praticamente um aluno de Hogwarts!</div>
         <div class="imagemETexto">
-        <img src="imagens/imagemFim.png" alt="img fimd e jogo">
+        <img src="imagens/imagemFim.png" alt="img fim de jogo">
         <p>Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</p>
         </div>
     </div>
@@ -122,31 +193,6 @@
    
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!--Tela 3.1: Criação de Quiz-->
     <main class="mainTela_3">
@@ -184,7 +230,6 @@
                     <ion-icon name="create-outline"></ion-icon>
                 </div>
             </form>
- 
         <!--Tela 3.3-->
         <!--Agora, decida os níveis!-->
             <form class="forms tela_3_3 desaparece">
@@ -205,7 +250,7 @@
             </form>
         <!--Tela 3.4-->
         <!--Seu quizz está pronto!-->
-            <form class="forms tela_3_4">
+            <form class="forms tela_3_4 desaparece">
                 <!--Tem que ser alimentada pelo JavaScript-->
                 <h2>Seu quizz está pronto!</h2>
                 <img class="imgHP" src="./imagens/tituloImagemHP.png">
