@@ -122,7 +122,7 @@ body{
     display: none;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 1100px) {
     
     .todosQuizzes {
         display: flex;
@@ -173,7 +173,7 @@ body{
     align-items: center;
     margin-top: 24px;
     width: 759px;
-    height: 676px;
+    /* height: 676px; */
     background-color: white;
     transition: all .4s linear;
     box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.05);
@@ -190,14 +190,16 @@ body{
 
 .imagemETexto{
     display: flex;
-
+    justify-content: space-between;
+    width: 688px;
 }
+
 
 
 .fim img{
     width: 364px;
     height: 273px;
-    margin: 18px 21px 22px 18px;
+    margin: 18px 21px 22px 0px;
 }
 
 .fim p{
@@ -220,7 +222,7 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 688.16px;
+    width: 688px;
     height: 137.99px;
     background-color: #434CA0;
 }
@@ -231,17 +233,18 @@ body{
 
 
 .opcoes{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 
 .opcao{
-    width:330px ;
-    margin: 20px 12px;
+    width: 330px;
+    margin: 20px 14px;
 }
 
 .opcao img{
-    
+    margin: auto;
     height: 175px;
 }
 
@@ -279,9 +282,9 @@ body{
 }
 
 
-/* mobole da tela 2 */
+/* mobile da tela 2 */
 
-@media(max-width:760px){
+@media(max-width:1100px){
 
     .tituloImagem{
         height: 142px;
@@ -289,14 +292,15 @@ body{
 
     .pergunta, .fim{
         width: 375px;
-        height: 436px;
+        /* height: 436px; */
         margin-top: 28px;
      
     }
     .caixaPergunta{
         width: 340px;
-        padding: 20px 0px 15px 0px ;
+        /* padding: 20px 0px 15px 0px; */
         font-size: 19px;
+        height: 89px;
     }
 
     
@@ -306,13 +310,12 @@ body{
     }
 
     .opcao{
-        width: 43.5%; 
-       
-      
-
+        width: 163px;
+        margin: 12px 6px 0px; 
     }
+
     .opcao img{
-       width: 167px;
+        width: 163px;
         height: 113px;
         margin-bottom: 0px;
         margin-top: 0px;
@@ -330,14 +333,17 @@ body{
 
     .caixaResultado{
         width: 340px;
-        padding: 23px 0px 0px 0px ;
+        padding: 23px 16px;
+        box-sizing: border-box;
         font-size: 19px;
 
     }
 
     .imagemETexto{
         flex-direction: column;
+        align-items: center;
     }
+
     .imagemETexto p{
         width: 340px;
         height: 96px;
