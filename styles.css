@@ -170,11 +170,13 @@ form{
     justify-content: space-between;
     background-color: #ffffff;
     margin: 5px 0;
+    cursor: pointer;
 }
 
 .pergunta2 ion-icon{
     width: 26px;
     height: 23px;
+    cursor: pointer;
 }
 
 form input:focus{
@@ -190,6 +192,8 @@ h3{
 
 .imgHP{
     width: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 65.62%, rgba(0, 0, 0, 0.8) 100%);
+    border-radius: 5px;
 }
 
 .botaoForm{
@@ -202,33 +206,12 @@ h3{
     border-radius: 15px;
     font-size: 21px;
     font-weight: 400;
+    cursor: pointer;
 }
 
 .desaparece{
     display: none;
 }
-
-@media (max-width: 1100px) {
-    .todosQuizzes {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .todosQuizzesContainer {
-        width: 340px;
-    }
-
-    .seusQuizzesContainer {
-        justify-content: space-between;
-    }
-
-    .criarQuizzContainer {
-        width: 340px;
-    }
-}
-/* ----------------------------------------- */
-
-
 
 /* PÁGINA DE UM QUIZZ */
 .tituloImagem{
@@ -367,10 +350,27 @@ h3{
 }
 
 
-/* mobile da tela 2 */
 
 @media(max-width:1100px){
 
+    .todosQuizzes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .todosQuizzesContainer {
+        width: 340px;
+    }
+
+    .seusQuizzesContainer {
+        justify-content: space-between;
+    }
+
+    .criarQuizzContainer {
+        width: 340px;
+    } 
+
+    /* mobile da tela 2 */
     .tituloImagem{
         height: 142px;
     }
@@ -443,4 +443,13 @@ h3{
         margin-top: 9px;
     }
 
+    /*mobile Tela 3*/
+    
+    form{
+        width: 375px;
+    }
+    
+    .botaoForm{
+        width: 324px;
+    }
 }
