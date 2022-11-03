@@ -99,12 +99,6 @@ body{
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 64.58%, #000000 100%), url(./files/simpsons.png);
     width: 340px;
     height: 181px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    color: red;
-    font-weight: 700;
-    font-size: 25px;
     border-radius: 5px;
 }
 
@@ -122,8 +116,99 @@ body{
     display: none;
 }
 
+/*Tela 3*/
+main{
+    width: 100%;
+    height: 200% auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2{
+    margin: 45px 0;
+    font-size: 23px;
+    font-weight: 700;
+    text-align: center;
+}
+
+form{
+    position: relative;
+    width: 600px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px 0 0 0;
+}
+
+.forms input{
+    height: 46px;
+    margin: 10px;
+    font-style: italic;
+    font-size: 19px;
+    font-weight: 400;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    color: #BABABA;
+}
+
+.pergunta{
+    width: 600px;
+    padding: 0 5px;
+}
+
+.perguntas input{
+    width: 100%;
+}
+
+.pergunta2{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    margin: 5px 0;
+}
+
+.pergunta2 ion-icon{
+    width: 26px;
+    height: 23px;
+}
+
+form input:focus{
+    color: #000000;
+    font-style:inherit;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.imgHP{
+    width: 100%;
+}
+
+.botaoForm{
+    width: 368px;
+    height: 54px;
+    background-color: #EC362D;
+    color: #ffffff;
+    border: none;
+    margin-top: 40px;
+    border-radius: 15px;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.desaparece{
+    display: none;
+}
+
 @media (max-width: 1100px) {
-    
     .todosQuizzes {
         display: flex;
         flex-direction: column;
