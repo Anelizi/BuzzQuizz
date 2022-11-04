@@ -188,6 +188,7 @@ h3{
     font-size: 20px;
     font-weight: 700;
     margin-top: 5px;
+    text-align: left;
 }
 
 .imgHP{
@@ -445,7 +446,7 @@ h3{
 
     /*mobile Tela 3*/
     
-    form{
+    form, .pergunta2, h3{
         width: 375px;
     }
     
