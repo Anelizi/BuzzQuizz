@@ -8,10 +8,7 @@ body{
 .header{
     width: 100%;
     height: 69px;
-    font-size: 37px;
-    font-weight: 700;
     box-shadow: 0px 4px 4px 0px hsla(0, 0%, 0%, 0.25);
-    color: white;
     background-color: #EC362D;
     display: flex;
     justify-content: center;
@@ -20,6 +17,13 @@ body{
     top: 0px;
     left: 0px;
     z-index: 1;
+}
+
+.header h1 {
+    font-size: 37px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
 }
 
 /* LISTA DE QUIZZES */
@@ -52,6 +56,7 @@ body{
     border: 1px dashed #EC362D;
     border-radius: 50px;
     color: #EC362D;
+    cursor: pointer;
 }
 
 .todosQuizzesContainer {
@@ -93,12 +98,16 @@ body{
     height: 181px;
     position: relative;
     margin: 12px 15px 0px 0px;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .imagemCapaQuizz {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 64.58%, #000000 100%), url(./files/simpsons.png);
+    /* background-image: url(./files/simpsons.png);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 64.58%, #000000 100%); */
+    background-size: 340px 180px;
     width: 340px;
-    height: 181px;
+    height: 180px;
     border-radius: 5px;
 }
 
@@ -112,7 +121,7 @@ body{
     width: 300px;
 }
 
-.hide {
+.esconder {
     display: none;
 }
 
@@ -156,20 +165,23 @@ form{
     color: #BABABA;
 }
 
-.pergunta{
+.perguntas{
     width: 600px;
-    padding: 0 5px;
+}
+
+.perguntas h3{
+    padding-left: 20px;
 }
 
 .perguntas input{
-    width: 100%;
+    width: 95%;
 }
 
 .pergunta2{
+    width: 600px;
+    padding-left: 10px;
     display: flex;
     justify-content: space-between;
-    background-color: #ffffff;
-    margin: 5px 0;
     cursor: pointer;
 }
 
@@ -185,6 +197,7 @@ form input:focus{
 }
 
 h3{
+    width: 600px;
     font-size: 20px;
     font-weight: 700;
     margin-top: 5px;
@@ -214,7 +227,7 @@ h3{
     display: none;
 }
 
-/* PÁGINA DE UM QUIZZ */
+/* TELA 2 PÁGINA DE UM QUIZZ */
 .tituloImagem{
     color: white;
     font-size: 19px;
@@ -315,6 +328,7 @@ h3{
 .opcao img{
     margin: auto;
     height: 175px;
+    cursor: pointer;
 }
 
 .opcao p{
@@ -348,9 +362,20 @@ h3{
     height: 44px;
     margin-bottom: 80px;
     color: #818181;
+    cursor: pointer;
 }
 
+.naoEscolhida {
+    opacity: 0.3;
+}
 
+.respostaCerta {
+    color: #009C22;
+}
+
+.respostaErrada {
+    color: #FF0B0B;
+}
 
 @media(max-width:1100px){
 
@@ -446,11 +471,12 @@ h3{
 
     /*mobile Tela 3*/
     
-    form, .pergunta2, h3{
+    form, .pergunta2, h3, .perguntas{
         width: 375px;
     }
     
     .botaoForm{
         width: 324px;
     }
+
 }
