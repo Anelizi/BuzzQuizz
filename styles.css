@@ -211,6 +211,13 @@ h3{
     cursor: pointer;
 }
 
+.tela31,.tela32,.tela33,.tela34{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .desaparece{
     display: none;
 }
