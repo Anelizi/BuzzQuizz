@@ -99,10 +99,12 @@ function renderizarQuizz() {
         for (let j = 0; j < quizz.questions[i].answers.length; j++) {
             
             opcoes[i].innerHTML += `
-            <li class="opcao" onclick="respostaSelecionada(this)"> <img src="${quizz.questions[i].answers[j].image}" alt="imagem ${j}">
-                <p>${quizz.questions[i].answers[j].text}</p>
+            <li class="opcao" onclick="respostaSelecionada(this)"> <img class="imagem" src="${quizz.questions[i].answers[j].image}" alt="imagem ${j}">
+                <p class="texto">${quizz.questions[i].answers[j].text}</p>
+                <p class="resposta" style="display: none;">${quizz.questions[i].answers[j].isCorrectAnswer}</p>
             </li>
             `
+            console.log(quizz.questions[i].answers[j].isCorrectAnswer)
         }
     }
     
@@ -111,11 +113,17 @@ function renderizarQuizz() {
 
 // RESPOSTA SELECIONADA DO QUIZZ
 function respostaSelecionada(respostaSelecionadaQuizz) {
-   
-    const idQuizzSelecionado = respostaSelecionadaQuizz.querySelector('.id');
-    idQuizz = (idQuizzSelecionado.innerHTML);
-    console.log(idQuizz); // DENTRO DESSE IDQUIZZ ESTÁ O ID DO QUIZZ SELECIONADO
-    pegarQuizz()
+    const textoResposta = respostaSelecionadaQuizz.querySelector('.texto')
+    const imagem = respostaSelecionadaQuizz.querySelector('.imagem')
+    
+    const respostaQuizzSelecionado = respostaSelecionadaQuizz.querySelector('.resposta');
+    let respostaQuizz = (respostaQuizzSelecionado.innerHTML);
+
+    if (respostaQuizzSelecionado.innerHTML == 'true') {
+        textoResposta.classList.add('respostaCerta')
+    } else {
+        textoResposta.classList.add('respostaErrada')
+    }
 }
 
 
