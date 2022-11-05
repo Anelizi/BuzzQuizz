@@ -127,4 +127,56 @@ function home() {
 // BOTÃO CRIAR QUIZZ TELA 1
 function criarQuizz() {
     
+    let paginaAtual =  document.querySelector(".tela1")
+    let proximaPagina = document.querySelector(".tela31")
+    paginaAtual.classList.add("desaparece")
+    proximaPagina.classList.remove("desaparece")
+
+}
+
+
+function dadosBasicos(esseBotao){
+    titulo = document.querySelector("#input_1").valor
+    url = document.querySelector("#input_2")
+    numPerguntas = document.querySelector("#input_3")
+    numNiveis = document.querySelector("#input_4")
+
+    console.log(titulo)
+    if(titulo == "" || url == "" || numPerguntas == "" || numNiveis == ""){
+       alert("Dados insuficientes")
+    }
+    else{
+       proxima1(esseBotao)
+    }
+
+}
+
+
+
+function proxima1(botao){
+    let paginaAtual = botao.parentNode
+    let proximaPagina = document.querySelector(".tela32")
+    paginaAtual.classList.add("desaparece")
+    proximaPagina.classList.remove("desaparece")
+}
+
+function proxima2(botao){
+    let paginaAtual = botao.parentNode
+    let proximaPagina = document.querySelector(".tela33")
+    paginaAtual.classList.add("desaparece")
+    proximaPagina.classList.remove("desaparece")
+}
+
+function proxima3(botao){
+    let paginaAtual = botao.parentNode
+    let proximaPagina = document.querySelector(".tela34")
+    paginaAtual.classList.add("desaparece")
+    proximaPagina.classList.remove("desaparece")
+}
+
+function proxima4(botao){
+    let paginaAtual = botao.parentNode
+    let proximaPagina = document.querySelector(".tela1")
+    paginaAtual.classList.add("desaparece")
+    proximaPagina.classList.remove("desaparece")
 }
