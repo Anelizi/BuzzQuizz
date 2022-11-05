@@ -125,23 +125,14 @@ function renderizarQuizz() {
 
 // RESPOSTA SELECIONADA DO QUIZZ
 function respostaSelecionada(respostaSelecionadaQuizz) {
-    const imagem = respostaSelecionadaQuizz.querySelector('.imagem')
     
-    const respostaQuizzSelecionado = respostaSelecionadaQuizz.querySelector('.resposta');
-    let respostaQuizz = (respostaQuizzSelecionado.innerHTML);
+    let opcoes = respostaSelecionadaQuizz.parentNode
+    let alternativas = opcoes.querySelectorAll('.opcao')
 
-    respostasNaoSelecionadas = document.querySelectorAll('.opcao')
-
-    for (let i = 0; i < respostasNaoSelecionadas.length; i++) {
-        respostasNaoSelecionadas[i].classList.add('naoEscolhida')
-    }
-
-    respostaSelecionadaQuizz.classList.remove('naoEscolhida')
-
-    if (respostaQuizzSelecionado.innerHTML == 'true') {
-        respostaSelecionadaQuizz.classList.add('respostaCerta')
-    } else {
-        respostaSelecionadaQuizz.classList.add('respostaErrada')
+    for(i =0; i<alternativas.length;i++){
+        if(alternativas[i] != respostaSelecionadaQuizz){alternativas[i].classList.add("naoEscolhida")}
+        if(alternativas[i].innerHTML == 'true'){alternativas[i].classList.add('respostaCerta')}
+        if(alternativas[i].innerHTML != 'true'){alternativas[i].classList.add('respostaErrada')}
     }
 }
 
