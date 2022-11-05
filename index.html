@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://www.buzzfeed.com/obiwan-static/images/about/press-assets/BuzzFeed_Arrow.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -15,7 +16,9 @@
 </head>
 <body>
 
-     <div class="header">BuzzQuizz</div>   
+     <div class="header">
+        <h1 onclick="home()">BuzzQuizz</h1>
+    </div>   
     <!-- esse é o header no topo do site, pode ser usado em todas as telas  -->
 
     <!-- INICIO TELA 1 - LISTA DE QUIZZES -->
@@ -55,7 +58,7 @@
         <!-- --------------------------------------------------------------------------->
 
 
-
+       <!-- essa div sempre fica visivel na tela 1 -->
        <div class="todosQuizzesContainer">
            <h2>Todos os Quizzes</h2>
            <ul class="todosQuizzes">
@@ -93,110 +96,102 @@
    </div>
     
 
-   <div class="tela2">
-    <!-- tela 2: aqui vai ser o código a exibição de um quizz. -->
-    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+   <div class="tela2 esconder">
+        <div class="tituloImagem">O quão Potterhead é você?</div>
+        
+        <ul class="perguntas">
 
-    <!-- --------------------------------------------------------------------------------------------------------------------- -->
+            <!-- cada pergunta é um item il  -->
 
+            <li class="pergunta um">
 
-    <div class="tituloImagem">O quão Potterhead é você?</div>
-    <!-- Aqui tem o título do figma, mas depois esse título vai vir no innerHTML do js  -->
+                <div class="caixaPergunta" style="background-color: #434CA0;"> Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
 
+                <!-- cada opção de resposta é um item li dentro da il pergunta no html  -->
+                <ul class="opcoes">
+                    
+                    <li class="opcao"> <img src="imagens/gato.png" alt="imagem a">
+                        <p>Gatíneo</p>
+                    </li>
 
-    <!-- --------------------------------------------------------------------------------------------------------------------- -->
-
-
-   <ul class="perguntas">
-
-    <!-- cada pergunta é um item il  -->
-
-    <li class="pergunta um">
-
-        <div class="caixaPergunta"> Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
-
-            <!-- cada opção de resposta é um item li dentro da il pergunta no html  -->
-            <ul class="opcoes">
+                    <li class="opcao"> <img src="imagens/rato.png" alt="imagem a">
+                        <p>Ratata</p>
+                    </li>
                 
-                <li class="opcao"> <img src="imagens/gato.png" alt="imagem a">
-                    <p>Gatíneo</p>
-                </li>
+                    <li class="opcao"> <img src="imagens/sapo.png" alt="imagem a">
+                        <p>Sapo gordoo</p>
+                    </li>
 
-                <li class="opcao"> <img src="imagens/rato.png" alt="imagem a">
-                    <p>Ratata</p>
-                </li>
-            
-                <li class="opcao"> <img src="imagens/sapo.png" alt="imagem a">
-                    <p>Sapo gordoo</p>
-                </li>
+                    <li class="opcao"> <img src="imagens/furao.png" alt="imagem a">
+                        <p>Mustela putorius (o Furão)</p>
+                    </li>
 
-                <li class="opcao"> <img src="imagens/furao.png" alt="imagem a">
-                    <p>Mustela putorius (o Furão)</p>
-                </li>
-
-            </ul>
+                </ul>
 
 
-    </li>
+            </li>
 
 
-    <li class="pergunta dois">
+            <li class="pergunta dois">
 
-        <div class="caixaPergunta"> Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
+                <div class="caixaPergunta"> Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
 
-            <!-- cada opção de resposta é um item li dentro da il pergunta no html  -->
-            <ul class="opcoes">
-                
-                <li class="opcao a"> <img src="imagens/gato.png" alt="imagem a">
-                    <p>Gatíneo</p>
-                </li>
+                    <!-- cada opção de resposta é um item li dentro da il pergunta no html  -->
+                    <ul class="opcoes">
+                        
+                        <li class="opcao a" onclick="respostaSelecionada(this)"> <img src="imagens/gato.png" alt="imagem a">
+                            <p>Gatíneo</p>
+                        </li>
 
-                <li class="opcao b"> <img src="imagens/rato.png" alt="imagem a">
-                    <p>Ratata</p>
-                </li>
+                        <li class="opcao b"> <img src="imagens/rato.png" alt="imagem a">
+                            <p>Ratata</p>
+                        </li>
 
-                <li class="opcao c"> <img src="imagens/sapo.png" alt="imagem a">
-                    <p>Sapo gordoo</p>
-                </li>
+                        <li class="opcao c"> <img src="imagens/sapo.png" alt="imagem a">
+                            <p>Sapo gordoo</p>
+                        </li>
 
-                <li class="opcao d"> <img src="imagens/furao.png" alt="imagem a">
-                    <p>Mustela putorius (o Furão)</p>
-                </li>
+                        <li class="opcao d"> <img src="imagens/furao.png" alt="imagem a">
+                            <p>Mustela putorius (o Furão)</p>
+                        </li>
 
-            </ul>
-
-
-    </li>
+                    </ul>
 
 
-     <div class="fim">
+            </li>
+        </ul>
 
-        <div class="caixaResultado">88% de acerto: Você é praticamente um aluno de Hogwarts!</div>
-        <div class="imagemETexto">
-        <img src="imagens/imagemFim.png" alt="img fim de jogo">
-        <p>Parabéns Potterhead! Bem-vindo a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</p>
-        </div>
+            <div class="fim">
+
+                <div class="caixaResultado">88% de acerto: Você é praticamente um aluno de Hogwarts!</div>
+                <div class="imagemETexto">
+                <img src="imagens/imagemFim.png" alt="img fim de jogo">
+                <p>Parabéns Potterhead! Bem-vindo a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</p>
+                </div>
+            </div>
+
+
+
+                <div class="button">Reiniciar Quizz</div>
+
+                <p class="voltar" onclick="home()">Voltar pra home</p>
+        
+
     </div>
-
-
-
-        <div class="button">Reiniciar Quizz</div>
-
-        <p class="voltar">Voltar pra home</p>
-   </ul>
-
-
-   
-
-</div>
 
 
    
     <!--Tela 3.1: Criação de Quiz-->
+<<<<<<< HEAD
     <main class="mainTela_3">
         <div class="tela31 ">  <!-- tela 31 pq acho que dá problema ser botar ponto na classe  -->
             <h2>Comece pelo começo</h2>
             <form class="tela_3_1 forms">
+=======
+    <main class="tela3 esconder">
+            <!--<h2>Comece pelo começo</h2>-->
+            <form class="forms tela_3_1">
+>>>>>>> 7108c306dc7a48eff398d9bd2637b2d720a57b8d
                 <input id="input_1" type="text" placeholder="Título do seu quizz" >
                 <input id="input_2" type="url" placeholder="URL da imagem do seu quizz" >
                 <input id="input_3" type="number" placeholder="Quantidade de perguntas do quizz" min="3" >
@@ -248,7 +243,7 @@
                 <!--Tem que ser alimentada pelo JavaScript-->
                 <div class="perguntas">
                     <h3>Nível 1</h3>
-                    <input type="text" placeholder="Título do nível">
+                    <input class="titulo" type="text" placeholder="Título do nível">
                     <input type="text" placeholder="% de acerto mínima">
                     <input type="url" placeholder="URL da imagem do nível">
                     <input type="text" placeholder="Descrição do nível">
