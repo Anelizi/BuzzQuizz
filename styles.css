@@ -165,20 +165,23 @@ form{
     color: #BABABA;
 }
 
-.pergunta{
+.perguntas{
     width: 600px;
-    padding: 0 5px;
+}
+
+.perguntas h3{
+    padding-left: 20px;
 }
 
 .perguntas input{
-    width: 100%;
+    width: 95%;
 }
 
 .pergunta2{
+    width: 600px;
+    padding-left: 10px;
     display: flex;
     justify-content: space-between;
-    background-color: #ffffff;
-    margin: 5px 0;
     cursor: pointer;
 }
 
@@ -194,9 +197,11 @@ form input:focus{
 }
 
 h3{
+    width: 600px;
     font-size: 20px;
     font-weight: 700;
     margin-top: 5px;
+    text-align: left;
 }
 
 .imgHP{
@@ -218,14 +223,27 @@ h3{
     cursor: pointer;
 }
 
+.tela31,.tela32,.tela33,.tela34{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .desaparece{
     display: none;
 }
 
 /* TELA 2 PÁGINA DE UM QUIZZ */
+
+.tela2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .tituloImagem{
     color: white;
-    font-size: 19px;
+    font-size: 39px;
     font-weight: 400;
     width: 100%;
     height: 227px;
@@ -233,6 +251,7 @@ h3{
     justify-content: center;
     align-items: center;
     background-image: url(imagens/capadoquizz.png);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
 
 
 }
@@ -467,11 +486,12 @@ h3{
 
     /*mobile Tela 3*/
     
-    form{
+    form, .pergunta2, h3, .perguntas{
         width: 375px;
     }
     
     .botaoForm{
         width: 324px;
     }
+
 }
