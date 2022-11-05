@@ -4,6 +4,7 @@ const tela1 = document.querySelector('.tela1');
 const tela2 = document.querySelector('.tela2');
 const tela3 = document.querySelector('.tela3');
 const todosQuizzes = document.querySelector('.todosQuizzes');
+let opcoes;
 
 const scrollarCima = () => document.body.scrollTop = document.documentElement.scrollTop = 0;
 
@@ -93,7 +94,7 @@ function renderizarQuizz() {
                 </li>
             </ul>
     `
-        const opcoes = document.querySelectorAll('.opcoes')
+        opcoes = document.querySelectorAll('.opcoes')
         
 
         for (let j = 0; j < quizz.questions[i].answers.length; j++) {
@@ -104,7 +105,6 @@ function renderizarQuizz() {
                 <p class="resposta" style="display: none;">${quizz.questions[i].answers[j].isCorrectAnswer}</p>
             </li>
             `
-            console.log(quizz.questions[i].answers[j].isCorrectAnswer)
         }
     }
     
@@ -113,16 +113,16 @@ function renderizarQuizz() {
 
 // RESPOSTA SELECIONADA DO QUIZZ
 function respostaSelecionada(respostaSelecionadaQuizz) {
-    const textoResposta = respostaSelecionadaQuizz.querySelector('.texto')
     const imagem = respostaSelecionadaQuizz.querySelector('.imagem')
     
     const respostaQuizzSelecionado = respostaSelecionadaQuizz.querySelector('.resposta');
     let respostaQuizz = (respostaQuizzSelecionado.innerHTML);
 
     if (respostaQuizzSelecionado.innerHTML == 'true') {
-        textoResposta.classList.add('respostaCerta')
+        respostaSelecionadaQuizz.classList.add('respostaCerta')
+        respostaSelecionadaQuizz.classList.add('naoEscolhida')
     } else {
-        textoResposta.classList.add('respostaErrada')
+        respostaSelecionadaQuizz.classList.add('respostaErrada')
     }
 }
 

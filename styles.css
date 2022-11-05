@@ -322,6 +322,7 @@ h3{
 
 .opcao img{
     margin: auto;
+    width: 330px;
     height: 175px;
     cursor: pointer;
 }
