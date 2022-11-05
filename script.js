@@ -6,6 +6,8 @@ const tela3 = document.querySelector('.tela3');
 const todosQuizzes = document.querySelector('.todosQuizzes');
 let opcoes;
 
+let respostasNaoSelecionadas;
+
 const scrollarCima = () => document.body.scrollTop = document.documentElement.scrollTop = 0;
 
 let idQuizz;
@@ -117,6 +119,7 @@ function renderizarQuizz() {
         
     }
     
+    
 }
 
 
@@ -127,9 +130,16 @@ function respostaSelecionada(respostaSelecionadaQuizz) {
     const respostaQuizzSelecionado = respostaSelecionadaQuizz.querySelector('.resposta');
     let respostaQuizz = (respostaQuizzSelecionado.innerHTML);
 
+    respostasNaoSelecionadas = document.querySelectorAll('.opcao')
+
+    for (let i = 0; i < respostasNaoSelecionadas.length; i++) {
+        respostasNaoSelecionadas[i].classList.add('naoEscolhida')
+    }
+
+    respostaSelecionadaQuizz.classList.remove('naoEscolhida')
+
     if (respostaQuizzSelecionado.innerHTML == 'true') {
         respostaSelecionadaQuizz.classList.add('respostaCerta')
-        respostaSelecionadaQuizz.classList.add('naoEscolhida')
     } else {
         respostaSelecionadaQuizz.classList.add('respostaErrada')
     }
