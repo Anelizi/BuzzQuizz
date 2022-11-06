@@ -4,6 +4,9 @@ const tela1 = document.querySelector('.tela1');
 const tela2 = document.querySelector('.tela2');
 const tela3 = document.querySelector('.tela3');
 const todosQuizzes = document.querySelector('.todosQuizzes');
+let opcoes;
+
+let respostasNaoSelecionadas;
 
 const scrollarCima = () => document.body.scrollTop = document.documentElement.scrollTop = 0;
 
@@ -80,6 +83,13 @@ function renderizarQuizz() {
     tela2.innerHTML = `
         <div class="tituloImagem">${quizz.title}</div>
     `
+
+    const imagemTituloQuizz = document.querySelector('.tituloImagem');
+
+    let url = quizz.image;
+    imagemTituloQuizz.style.backgroundImage = `url(${url})`;
+
+
     for (let i = 0; i < quizz.questions.length; i++) {
         
         tela2.innerHTML += `
@@ -91,9 +101,39 @@ function renderizarQuizz() {
 
                     <ul class="opcoes"> </ul>
                 </li>
-        `
+            </ul>
+    `
+        opcoes = document.querySelectorAll('.opcoes')
+        
+
+        for (let j = 0; j < quizz.questions[i].answers.length; j++) {
+            
+            opcoes[i].innerHTML += `
+            <li class="opcao" onclick="respostaSelecionada(this)"> <img class="imagem" src="${quizz.questions[i].answers[j].image}" alt="imagem ${j}">
+                <p class="texto">${quizz.questions[i].answers[j].text}</p>
+                <p class="resposta" style="display: none;">${quizz.questions[i].answers[j].isCorrectAnswer}</p>
+            </li>
+            `
+        }
+
+        
     }
     
+    
+}
+
+
+// RESPOSTA SELECIONADA DO QUIZZ
+function respostaSelecionada(respostaSelecionadaQuizz) {
+    
+    let opcoes = respostaSelecionadaQuizz.parentNode
+    let alternativas = opcoes.querySelectorAll('.opcao')
+
+    for(i =0; i<alternativas.length;i++){
+        if(alternativas[i] != respostaSelecionadaQuizz){alternativas[i].classList.add("naoEscolhida")}
+        if(alternativas[i].innerHTML == 'true'){alternativas[i].classList.add('respostaCerta')}
+        if(alternativas[i].innerHTML != 'true'){alternativas[i].classList.add('respostaErrada')}
+    }
 }
 
 
@@ -118,7 +158,7 @@ function quizzNaoRecebido(quizzNaoRecebido) {
 // BOTÃO VOLTAR PARA HOME
 function home() {
     tela1.classList.remove('esconder');
-    tela2.classList.add('esconder');
+    tela2.innerHTML = "";
     tela3.classList.add('esconder');
     scrollarCima()
 }
@@ -126,40 +166,60 @@ function home() {
 
 // BOTÃO CRIAR QUIZZ TELA 1
 function criarQuizz() {
-    tela1.classList.add('esconder');
-    tela3.classList.remove('esconder');
+    
+    let paginaAtual =  document.querySelector(".tela1")
+    let proximaPagina = document.querySelector(".tela31")
+    paginaAtual.classList.add("desaparece")
+    proximaPagina.classList.remove("desaparece")
+
+}
+
+
+function dadosBasicos(esseBotao){
+    titulo = document.querySelector("#input_1").valor
+    url = document.querySelector("#input_2")
+    numPerguntas = document.querySelector("#input_3")
+    numNiveis = document.querySelector("#input_4")
+
+    console.log(titulo)
+    if(titulo == "" || url == "" || numPerguntas == "" || numNiveis == ""){
+       alert("Dados insuficientes")
+    }
+    else{
+       proxima1(esseBotao)
+    }
+
 }
 
 
 
+function proxima1(botao){
+    let paginaAtual = botao.parentNode
+    let proximaPagina = document.querySelector(".tela32")
+    paginaAtual.classList.add("desaparece")
+    proximaPagina.classList.remove("desaparece")
+}
 
+function proxima2(botao){
+    let paginaAtual = botao.parentNode
+    let proximaPagina = document.querySelector(".tela33")
+    paginaAtual.classList.add("desaparece")
+    proximaPagina.classList.remove("desaparece")
+}
 
+function proxima3(botao){
+    let paginaAtual = botao.parentNode
+    let proximaPagina = document.querySelector(".tela34")
+    paginaAtual.classList.add("desaparece")
+    proximaPagina.classList.remove("desaparece")
+}
 
-{/* <ul class="opcoes">
-                            
-                            <li class="opcao"> <img src="imagens/gato.png" alt="imagem a">
-                                <p>Gatíneo</p>
-                            </li>
-
-                            <li class="opcao"> <img src="imagens/rato.png" alt="imagem a">
-                                <p>Ratata</p>
-                            </li>
-                        
-                            <li class="opcao"> <img src="imagens/sapo.png" alt="imagem a">
-                                <p>Sapo gordoo</p>
-                            </li>
-
-                            <li class="opcao"> <img src="imagens/furao.png" alt="imagem a">
-                                <p>Mustela putorius (o Furão)</p>
-                            </li>
-
-                        </ul> */}
-
-
-
-
-
-
+function proxima4(botao){
+    let paginaAtual = botao.parentNode
+    let proximaPagina = document.querySelector(".tela1")
+    paginaAtual.classList.add("desaparece")
+    proximaPagina.classList.remove("desaparece")
+}
 
 
 
