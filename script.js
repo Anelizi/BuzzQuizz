@@ -158,7 +158,7 @@ function quizzNaoRecebido(quizzNaoRecebido) {
 // BOTÃO VOLTAR PARA HOME
 function home() {
     tela1.classList.remove('esconder');
-    tela2.classList.add('esconder');
+    tela2.innerHTML = "";
     tela3.classList.add('esconder');
     scrollarCima()
 }
