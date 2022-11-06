@@ -10,8 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <title>Buzzquizz</title>
 </head>
 <body>
@@ -182,19 +180,22 @@
 
    
     <!--Tela 3.1: Criação de Quiz-->
-    <main class="tela3 esconder">
-            <!--<h2>Comece pelo começo</h2>-->
-            <form class="forms tela_3_1">
+    <main class="tela3">
+        <h2>Comece pelo começo</h2>
+        <form class="forms tela_3_1">
                 <input id="input_1" type="text" placeholder="Título do seu quizz" >
                 <input id="input_2" type="url" placeholder="URL da imagem do seu quizz" >
                 <input id="input_3" type="number" placeholder="Quantidade de perguntas do quizz" min="3" >
                 <input id="input_4" type="number" placeholder="Quantidade de níveis do quizz" min="2">
             </form>
-            
+            <button class="botaoForm" onclick="buttonPerguntas()">
+                <p>Prosseguir pra criar perguntas</p>
+            </button> 
         <!--Tela 3.2-->
         <!--Crie suas perguntas-->
-            <form class="forms tela_3_2">
+            <form class="forms tela_3_2 desaparece">
                 <!--Tem que ser alimentada pelo JavaScript-->
+                <h2>Crie suas perguntas</h2>
                 <div class="perguntas">
                     <h3>Pergunta 1</h3>
                     <input type="text" placeholder="Texto da pergunta">
@@ -211,17 +212,18 @@
                     <input type="url" placeholder="URL da imagem 3">
                 </div>
             </form> 
-            <form action="forms tela_3_2">   
-                <div class="pergunta2">
+            <form action="forms desaparece">   
+                <div class="pergunta2 desaparece">
                     <h3>Pergunta 2</h3>
                     <ion-icon name="create-outline"></ion-icon>
                 </div>
             </form>
         <!--Tela 3.3-->
         <!--Agora, decida os níveis!-->
-            <form class="forms tela_3_3">
+            <form class="forms tela_3_3 desaparece">
                 <!--Tem que ser alimentada pelo JavaScript-->
-                <div class="perguntas">
+                <h2>Agora, decida os níveis!</h2>
+                <div class="perguntas desaparece">
                     <h3>Nível 1</h3>
                     <input class="titulo" type="text" placeholder="Título do nível">
                     <input type="text" placeholder="% de acerto mínima">
@@ -229,28 +231,28 @@
                     <input type="text" placeholder="Descrição do nível">
                 </div>
             </form>
-            <form action="forms tela_3_3">   
-                <div class="pergunta2">
+            <form action="forms tela_3_3 desaparece">   
+                <div class="pergunta2 desaparece">
                     <h3>Nível 2</h3>
                     <ion-icon name="create-outline"></ion-icon>
                 </div>
             </form>
         <!--Tela 3.4-->
         <!--Seu quizz está pronto!-->
-            <form class="forms tela_3_4">
+            <form class="forms tela_3_4 desaparece">
                 <!--Tem que ser alimentada pelo JavaScript-->
                 <h2>Seu quizz está pronto!</h2>
                 <img class="imgHP" src="./imagens/tituloImagemHP.png">
             </form>
-            <button class="botaoForm" onclick="buttonPerguntas()">
+            <button class="botaoForm desaparece" onclick="buttonPerguntas()">
                 <p>Prosseguir pra criar perguntas</p>
             </button>
             <!--botao de voltar para home-->
     </main>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-   <script src="script.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
