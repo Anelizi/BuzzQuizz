@@ -132,9 +132,7 @@ function respostaSelecionada(respostaSelecionadaQuizz) {
 
     respostasNaoSelecionadas = document.querySelectorAll('.opcao')
 
-    for (let i = 0; i < respostasNaoSelecionadas.length; i++) {
-        respostasNaoSelecionadas[i].classList.add('naoEscolhida')
-    }
+    respostaSelecionadaQuizz.parentNode.classList.add('naoEscolhida')
 
     respostaSelecionadaQuizz.classList.remove('naoEscolhida')
 
