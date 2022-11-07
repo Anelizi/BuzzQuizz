@@ -125,15 +125,21 @@ function renderizarQuizz() {
 
 // RESPOSTA SELECIONADA DO QUIZZ
 function respostaSelecionada(respostaSelecionadaQuizz) {
-    
+    let jaFoi = respostaSelecionadaQuizz.parentNode.querySelector(".naoEscolhida")
+    if(jaFoi == undefined){
+
     let opcoes = respostaSelecionadaQuizz.parentNode
     let alternativas = opcoes.querySelectorAll('.opcao')
-
+    
     for(i =0; i<alternativas.length;i++){
+        let resposta = alternativas[i].querySelector(".resposta").innerHTML // to me aproveitando da gambiarra do Ricardo pra diferenciar verdadeiro e falso
+        
+        
         if(alternativas[i] != respostaSelecionadaQuizz){alternativas[i].classList.add("naoEscolhida")}
-        if(alternativas[i].innerHTML == 'true'){alternativas[i].classList.add('respostaCerta')}
-        if(alternativas[i].innerHTML != 'true'){alternativas[i].classList.add('respostaErrada')}
-    }
+        if(resposta == "true"){alternativas[i].classList.add('respostaCerta')}
+        else{alternativas[i].classList.add('respostaErrada')}
+        
+    }}
 }
 
 
