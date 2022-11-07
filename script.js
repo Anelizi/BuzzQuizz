@@ -141,7 +141,7 @@ function respostaSelecionada(respostaSelecionadaQuizz) {
         else{alternativas[i].classList.add('respostaErrada')}
         respostaSelecionadaQuizz.parentNode.parentNode.classList.remove("naoRespondida")
         
-        setTimeout(rolarParaPergunta,3000)
+        setTimeout(rolarParaPergunta,1500)
     }}
 }
 
