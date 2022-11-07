@@ -155,6 +155,7 @@ form{
 }
 
 .forms input{
+    width: 100%;
     height: 46px;
     margin: 10px;
     font-style: italic;
@@ -171,6 +172,7 @@ form{
 
 .perguntas h3{
     padding-left: 20px;
+    margin-top: 28px;
 }
 
 .perguntas input{
@@ -216,7 +218,7 @@ h3{
     background-color: #EC362D;
     color: #ffffff;
     border: none;
-    margin-top: 40px;
+    margin: 40px auto;
     border-radius: 15px;
     font-size: 21px;
     font-weight: 400;
@@ -248,12 +250,13 @@ h3{
     align-items: center;
     background-image: url(imagens/capadoquizz.png);
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
-
-
 }
 
 .perguntas{
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .pergunta, .fim{

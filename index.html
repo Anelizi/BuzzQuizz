@@ -10,8 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <title>Buzzquizz</title>
 </head>
 <body>
@@ -97,150 +95,69 @@
     
 
    <div class="tela2 esconder">
-        <div class="tituloImagem">O quão Potterhead é você?</div>
-        
-        <ul class="perguntas">
+       
 
-            <!-- cada pergunta é um item il  -->
-
-            <li class="pergunta um">
-
-                <div class="caixaPergunta" style="background-color: #434CA0;"> Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
-
-                <!-- cada opção de resposta é um item li dentro da il pergunta no html  -->
-                <ul class="opcoes">
-                    
-                    <li class="opcao"> <img src="imagens/gato.png" alt="imagem a">
-                        <p>Gatíneo</p>
-                    </li>
-
-                    <li class="opcao"> <img src="imagens/rato.png" alt="imagem a">
-                        <p>Ratata</p>
-                    </li>
-                
-                    <li class="opcao"> <img src="imagens/sapo.png" alt="imagem a">
-                        <p>Sapo gordoo</p>
-                    </li>
-
-                    <li class="opcao"> <img src="imagens/furao.png" alt="imagem a">
-                        <p>Mustela putorius (o Furão)</p>
-                    </li>
-
-                </ul>
-
-
-            </li>
-
-
-            <li class="pergunta dois">
-
-                <div class="caixaPergunta"> Em qual animal Olho-Tonto Moody transfigurou Malfoy?</div>
-
-                    <!-- cada opção de resposta é um item li dentro da il pergunta no html  -->
-                    <ul class="opcoes">
-                        
-                        <li class="opcao a" onclick="respostaSelecionada(this)"> <img src="imagens/gato.png" alt="imagem a">
-                            <p>Gatíneo</p>
-                        </li>
-
-                        <li class="opcao b"> <img src="imagens/rato.png" alt="imagem a">
-                            <p>Ratata</p>
-                        </li>
-
-                        <li class="opcao c"> <img src="imagens/sapo.png" alt="imagem a">
-                            <p>Sapo gordoo</p>
-                        </li>
-
-                        <li class="opcao d"> <img src="imagens/furao.png" alt="imagem a">
-                            <p>Mustela putorius (o Furão)</p>
-                        </li>
-
-                    </ul>
-
-
-            </li>
-        </ul>
-
-            <div class="fim">
-
-                <div class="caixaResultado">88% de acerto: Você é praticamente um aluno de Hogwarts!</div>
-                <div class="imagemETexto">
-                <img src="imagens/imagemFim.png" alt="img fim de jogo">
-                <p>Parabéns Potterhead! Bem-vindo a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</p>
-                </div>
-            </div>
-
-
-
-                <div class="button">Reiniciar Quizz</div>
-
-                <p class="voltar" onclick="home()">Voltar pra home</p>
-        
 
     </div>
 
 
    
     <!--Tela 3.1: Criação de Quiz-->
-
     <main class="tela3">
-        <div class="tela31 desaparece ">  <!-- tela 31 pq acho que dá problema ser botar ponto na classe  -->
-            <form class="tela_3_1 forms">
-
-    
-            <h2>Comece pelo começo</h2>
-            <form class="forms tela_3_1">
-
-                <input id="input_1" type="text" placeholder="Título do seu quizz" >
-                <input id="input_2" type="url" placeholder="URL da imagem do seu quizz" >
-                <input id="input_3" type="number" placeholder="Quantidade de perguntas do quizz" min="3" >
-                <input id="input_4" type="number" placeholder="Quantidade de níveis do quizz" min="2">
-            </form>
-
-            <button class="botaoForm" onclick="dadosBasicos(this)">
-                <p>Prosseguir pra criar perguntas</p>
-            </button>
-
+        <div class="tela3_1 desaparece">
+            <div class="tela31 ">  <!-- tela 31 pq acho que dá problema ser botar ponto na classe  -->
+                    <h2>Comece pelo começo</h2>
+                <form class="forms tela_3_1">
+                    <input id="input_1" type="text" placeholder="Título do seu quizz" >
+                    <input id="input_2" type="url" placeholder="URL da imagem do seu quizz" >
+                    <input id="input_3" type="number" placeholder="Quantidade de perguntas do quizz" min="3" >
+                    <input id="input_4" type="number" placeholder="Quantidade de níveis do quizz" min="2">
+                </form>
+                <button class="botaoForm" onclick="buttonPerguntas()">
+                    <p>Prosseguir pra criar perguntas</p>
+                </button>
             </div>
+        </div>
         <!--Tela 3.2-->
         
-        <div class="tela32 desaparece">
-           <h2>Crie suas perguntas</h2> 
-            <form class="forms tela_3_2">
-                <!--Tem que ser alimentada pelo JavaScript-->
-                <div class="perguntas">
-                    <h3>Pergunta 1</h3>
-                    <input type="text" placeholder="Texto da pergunta">
-                    <input type="text" placeholder="Cor de fundo da pergunta">
-                    <h3>Resposta correta</h3>
-                    <input type="text" placeholder="Resposta correta">
-                    <input type="url" placeholder="URL da imagem">
-                    <h3>Respostas incorretas</h3>
-                    <input type="text" placeholder="Resposta incorreta 1">
-                    <input type="url" placeholder="URL da imagem 1">
-                    <input type="text" placeholder="Resposta incorreta 2">
-                    <input type="url" placeholder="URL da imagem 2">
-                    <input type="text" placeholder="Resposta incorreta 3">
-                    <input type="url" placeholder="URL da imagem 3">
-                </div>
-            </form> 
-            <form action="forms tela_3_2">   
-                <div class="pergunta2">
-                    <h3>Pergunta 2</h3>
-                    <ion-icon name="create-outline"></ion-icon>
-                </div>
-            </form>
-            <button class="botaoForm" onclick="proxima2(this)">
-                <p>Prosseguir pra criar níveis</p>
-            </button>
+        <div class="tela3_2 esconder">
+            <div class="tela32">
+               <h2>Crie suas perguntas</h2>
+                <form class="forms tela_3_2">
+                    <!--Tem que ser alimentada pelo JavaScript-->
+                    <div class="perguntas">
+                        <h3>Pergunta 1</h3>
+                        <input type="text" placeholder="Texto da pergunta">
+                        <input type="text" placeholder="Cor de fundo da pergunta">
+                        <h3>Resposta correta</h3>
+                        <input type="text" placeholder="Resposta correta">
+                        <input type="url" placeholder="URL da imagem">
+                        <h3>Respostas incorretas</h3>
+                        <input type="text" placeholder="Resposta incorreta 1">
+                        <input type="url" placeholder="URL da imagem 1">
+                        <input type="text" placeholder="Resposta incorreta 2">
+                        <input type="url" placeholder="URL da imagem 2">
+                        <input type="text" placeholder="Resposta incorreta 3">
+                        <input type="url" placeholder="URL da imagem 3">
+                    </div>
+                </form>
+                <form action="forms desaparece">
+                    <div class="pergunta2 desaparece">
+                        <h3>Pergunta 2</h3>
+                        <ion-icon name="create-outline"></ion-icon>
+                    </div>
+                </form>
+                <button class="botaoForm" onclick="proxima2(this)">
+                    <p>Prosseguir pra criar níveis</p>
+                </button>
+            </div>
         </div>
         <!--Tela 3.3-->
-        
-        <div class="tela33 desaparece">
-           <h2> Agora, decida os níveis!</h2>
-            <form class="forms tela_3_3">
+        <!--Agora, decida os níveis!-->
+            <form class="forms tela_3_3 desaparece">
                 <!--Tem que ser alimentada pelo JavaScript-->
-                <div class="perguntas">
+                <h2>Agora, decida os níveis!</h2>
+                <div class="perguntas desaparece">
                     <h3>Nível 1</h3>
                     <input class="titulo" type="text" placeholder="Título do nível">
                     <input type="text" placeholder="% de acerto mínima">
@@ -248,8 +165,8 @@
                     <input type="text" placeholder="Descrição do nível">
                 </div>
             </form>
-            <form action="forms tela_3_3">   
-                <div class="pergunta2">
+            <form action="forms tela_3_3 desaparece">   
+                <div class="pergunta2 desaparece">
                     <h3>Nível 2</h3>
                     <ion-icon name="create-outline"></ion-icon>
                 </div>
@@ -259,23 +176,21 @@
             </button>
         </div>
         <!--Tela 3.4-->
-        <div class="tela34 desaparece">
-        <h2>Seu quizz está pronto! </h2>
-           
+        <!--Seu quizz está pronto!-->
+            <form class="forms tela_3_4">
+                <!--Tem que ser alimentada pelo JavaScript-->
                 <h2>Seu quizz está pronto!</h2>
                 <img class="imgHP" src="./imagens/tituloImagemHP.png">
-           
-            <button class="botaoForm" onclick="proxima4(this)">
-                <p>Acessar Quizz</p>
-            </button> 
-            <p class="voltar">Voltar pra home</p>
-        </div>
-            
+            </form>
+            <button class="botaoForm" onclick="buttonPerguntas()">
+                <p>Prosseguir pra criar perguntas</p>
+            </button>
+            <!--botao de voltar para home-->
     </main>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-   <script src="script.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
