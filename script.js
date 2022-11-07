@@ -95,7 +95,7 @@ function renderizarQuizz() {
         tela2.innerHTML += `
             <ul class="perguntas">
 
-                <li class="pergunta">
+                <li class="pergunta naoRespondida">
 
                     <div class="caixaPergunta" style="background-color: ${quizz.questions[i].color};">${quizz.questions[i].title}</div>
 
@@ -125,8 +125,8 @@ function renderizarQuizz() {
 
 // RESPOSTA SELECIONADA DO QUIZZ
 function respostaSelecionada(respostaSelecionadaQuizz) {
-    let jaFoi = respostaSelecionadaQuizz.parentNode.querySelector(".naoEscolhida")
-    if(jaFoi == undefined){
+    let proximaPergunta = document.querySelector(".naoRespondida")
+    if(respostaSelecionadaQuizz.parentNode.parentNode == proximaPergunta){
 
     let opcoes = respostaSelecionadaQuizz.parentNode
     let alternativas = opcoes.querySelectorAll('.opcao')
@@ -138,8 +138,15 @@ function respostaSelecionada(respostaSelecionadaQuizz) {
         if(alternativas[i] != respostaSelecionadaQuizz){alternativas[i].classList.add("naoEscolhida")}
         if(resposta == "true"){alternativas[i].classList.add('respostaCerta')}
         else{alternativas[i].classList.add('respostaErrada')}
+        respostaSelecionadaQuizz.parentNode.parentNode.classList.remove("naoRespondida")
         
+        setTimeout(rolarParaPergunta,3000)
     }}
+}
+
+function rolarParaPergunta(){
+    let proximaPergunta = document.querySelector(".naoRespondida")
+    proximaPergunta.scrollIntoView()
 }
 
 
